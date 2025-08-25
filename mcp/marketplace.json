@@ -208,6 +208,34 @@
           "AWS_REGION": "YOUR_AWS_REGION_HERE"
         }
       }
+    },
+    {
+      "name": "Linear",
+      "slug": "linear",
+      "creator": "Linear",
+      "description": "Linear is designed to help teams move fast, stay organized, and work efficiently. Whether you're managing projects, tracking issues, or optimizing your development process, Linear offers a clean, intuitive platform that adapts to your team's needs.",
+      "version": "1.0.0",
+      "repository": "https://mcp.linear.app/sse",
+      "category": "productivity",
+      "tags": ["linear", "project-management", "issues", "tracking", "teams"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"]
+      }
+    },
+    {
+      "name": "DeepWiki",
+      "slug": "deepwiki",
+      "creator": "Cognition",
+      "description": "DeepWiki MCP server for knowledge management and wiki operations",
+      "version": "1.0.0",
+      "repository": "https://mcp.deepwiki.com/sse",
+      "category": "knowledge",
+      "tags": ["wiki", "knowledge-management", "documentation", "deepwiki"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "mcp-remote", "https://mcp.deepwiki.com/sse"]
+      }
     }
   ]
 }
