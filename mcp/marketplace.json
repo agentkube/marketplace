@@ -235,6 +235,30 @@
       "configuration": {
         "url": "https://mcp.deepwiki.com/sse"
       }
+    },
+    {
+      "name": "mult-fetch-mcp-server",
+      "slug": "mult-fetch-mcp-server",
+      "creator": "lmcc-dev",
+      "description": "A versatile MCP-compliant web content fetching tool that supports multiple modes (browser/node), formats (HTML/JSON/Markdown/Text), and intelligent proxy detection, with bilingual interface.",
+      "version": "1.0.0",
+      "repository": "https://github.com/lmcc-dev/mult-fetch-mcp-server",
+      "category": "utility",
+      "tags": [
+        "mcp",
+        "fetch",
+        "web",
+        "http"
+      ],
+      "configuration": {
+        "command": "npx",
+        "args": [
+          "@lmcc-dev/mult-fetch-mcp-server"
+        ],
+        "env": {
+          "MCP_LANG": "en"
+        }
+      }
     }
   ]
 }
