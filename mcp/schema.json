@@ -73,31 +73,6 @@
                     "additionalProperties": {
                       "type": "string"
                     }
-                  },
-                  "install": {
-                    "type": "object",
-                    "properties": {
-                      "npm": {
-                        "type": "string",
-                        "description": "NPM package name"
-                      },
-                      "pip": {
-                        "type": "string",
-                        "description": "Python package name"
-                      },
-                      "cargo": {
-                        "type": "string",
-                        "description": "Rust crate name"
-                      },
-                      "custom": {
-                        "type": "array",
-                        "items": {
-                          "type": "string"
-                        },
-                        "description": "Custom installation commands"
-                      }
-                    },
-                    "description": "Installation instructions"
                   }
                 },
                 "required": ["command"],
