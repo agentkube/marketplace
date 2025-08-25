@@ -1,0 +1,132 @@
+{
+  "title": "MCP Marketplace",
+  "description": "A marketplace for Model Context Protocol servers and their configurations",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "description": "Marketplace schema version"
+    },
+    "servers": {
+      "type": "array",
+      "description": "Array of MCP servers available in the marketplace",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Display name of the MCP server"
+          },
+          "slug": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "URL-friendly identifier for the server"
+          },
+          "creator": {
+            "type": "string",
+            "description": "Creator or organization name"
+          },
+          "description": {
+            "type": "string",
+            "description": "Detailed description of what the server does"
+          },
+          "version": {
+            "type": "string",
+            "description": "Current version of the server"
+          },
+          "repository": {
+            "type": "string",
+            "format": "uri",
+            "description": "GitHub or other repository URL"
+          },
+          "category": {
+            "type": "string",
+            "description": "Category of the MCP server"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tags for better discoverability"
+          },
+          "configuration": {
+            "type": "object",
+            "description": "Configuration required to set up the server",
+            "oneOf": [
+              {
+                "properties": {
+                  "command": {
+                    "type": "string",
+                    "description": "Command to run the server"
+                  },
+                  "args": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Command line arguments"
+                  },
+                  "env": {
+                    "type": "object",
+                    "description": "Environment variables required",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  },
+                  "install": {
+                    "type": "object",
+                    "properties": {
+                      "npm": {
+                        "type": "string",
+                        "description": "NPM package name"
+                      },
+                      "pip": {
+                        "type": "string",
+                        "description": "Python package name"
+                      },
+                      "cargo": {
+                        "type": "string",
+                        "description": "Rust crate name"
+                      },
+                      "custom": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Custom installation commands"
+                      }
+                    },
+                    "description": "Installation instructions"
+                  }
+                },
+                "required": ["command"],
+                "additionalProperties": false
+              },
+              {
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "URL endpoint for the MCP server"
+                  },
+                  "headers": {
+                    "type": "object",
+                    "description": "HTTP headers for authentication",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": ["url"],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "required": ["name", "slug", "creator", "description", "configuration"]
+      }
+    }
+  },
+  "required": ["version", "servers"]
+}

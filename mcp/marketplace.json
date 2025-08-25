@@ -1,0 +1,249 @@
+{
+  "$schema": "./schema.json",
+  "version": "1.0.0",
+  "servers": [
+    {
+      "name": "File System",
+      "slug": "filesystem",
+      "creator": "Anthropic",
+      "description": "Secure file system operations with read, write, and directory management capabilities",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "utility",
+      "tags": ["filesystem", "files", "directories", "io"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/files"],
+        "install": {
+          "npm": "@modelcontextprotocol/server-filesystem"
+        }
+      }
+    },
+    {
+      "name": "Git",
+      "slug": "git",
+      "creator": "Anthropic",
+      "description": "Git repository operations including status, diff, log, and commit management",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "development",
+      "tags": ["git", "version-control", "repository", "commits"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-git", "--repository", "/path/to/git/repo"],
+        "install": {
+          "npm": "@modelcontextprotocol/server-git"
+        }
+      }
+    },
+    {
+      "name": "SQLite",
+      "slug": "sqlite",
+      "creator": "Anthropic",
+      "description": "SQLite database operations with secure query execution and schema introspection",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "data",
+      "tags": ["sqlite", "database", "sql", "query"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-sqlite", "/path/to/database.db"],
+        "install": {
+          "npm": "@modelcontextprotocol/server-sqlite"
+        }
+      }
+    },
+    {
+      "name": "Brave Search",
+      "slug": "brave-search",
+      "creator": "Anthropic",
+      "description": "Web search capabilities using Brave Search API for real-time information retrieval",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "ai",
+      "tags": ["search", "web", "brave", "api"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+        "env": {
+          "BRAVE_API_KEY": "your-brave-api-key"
+        },
+        "install": {
+          "npm": "@modelcontextprotocol/server-brave-search"
+        }
+      }
+    },
+    {
+      "name": "Postgres",
+      "slug": "postgres",
+      "creator": "Anthropic",
+      "description": "PostgreSQL database operations with advanced query capabilities and connection management",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "data",
+      "tags": ["postgresql", "database", "sql", "relational"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-postgres"],
+        "env": {
+          "POSTGRES_CONNECTION_STRING": "postgresql://user:password@localhost:5432/dbname"
+        },
+        "install": {
+          "npm": "@modelcontextprotocol/server-postgres"
+        }
+      }
+    },
+    {
+      "name": "GitHub",
+      "slug": "github",
+      "creator": "Microsoft",
+      "description": "GitHub integration with comprehensive toolsets for repositories, issues, pull requests, and more",
+      "version": "1.0.0",
+      "repository": "https://github.com/github/github-mcp-server",
+      "category": "development",
+      "tags": ["github", "git", "repositories", "issues", "pull-requests"],
+      "configuration": {
+        "url": "https://api.githubcopilot.com/mcp/",
+        "headers": {
+          "Authorization": "Bearer YOUR_GITHUB_PAT"
+        }
+      }
+    },
+    {
+      "name": "Puppeteer",
+      "slug": "puppeteer",
+      "creator": "Anthropic",
+      "description": "Browser automation and web scraping capabilities using Puppeteer",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "automation",
+      "tags": ["browser", "automation", "scraping", "puppeteer"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+        "install": {
+          "npm": "@modelcontextprotocol/server-puppeteer"
+        }
+      }
+    },
+    {
+      "name": "Slack",
+      "slug": "slack",
+      "creator": "Anthropic",
+      "description": "Slack integration for messaging, channels, and team collaboration",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "communication",
+      "tags": ["slack", "messaging", "collaboration", "teams"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-slack"],
+        "env": {
+          "SLACK_BOT_TOKEN": "xoxb-your-bot-token",
+          "SLACK_TEAM_ID": "T01234567",
+          "SLACK_CHANNEL_IDS": "C01234567, C76543210"
+        },
+        "install": {
+          "npm": "@modelcontextprotocol/server-slack"
+        }
+      }
+    },
+    {
+      "name": "Redis",
+      "slug": "redis",
+      "creator": "Anthropic",
+      "description": "Redis database operations for caching and data storage",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "data",
+      "tags": ["redis", "cache", "database", "key-value"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-redis", "redis://localhost:6379"],
+        "install": {
+          "npm": "@modelcontextprotocol/server-redis"
+        }
+      }
+    },
+    {
+      "name": "GitLab",
+      "slug": "gitlab",
+      "creator": "Anthropic",
+      "description": "GitLab integration for repositories, merge requests, and project management",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "development",
+      "tags": ["gitlab", "git", "repositories", "merge-requests"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-gitlab"],
+        "env": {
+          "GITLAB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>",
+          "GITLAB_API_URL": "https://gitlab.com/api/v4"
+        },
+        "install": {
+          "npm": "@modelcontextprotocol/server-gitlab"
+        }
+      }
+    },
+    {
+      "name": "Sentry",
+      "slug": "sentry",
+      "creator": "Community",
+      "description": "Sentry error tracking and performance monitoring integration",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "monitoring",
+      "tags": ["sentry", "errors", "monitoring", "debugging"],
+      "configuration": {
+        "command": "uvx",
+        "args": ["mcp-server-sentry", "--auth-token", "YOUR_SENTRY_TOKEN"],
+        "install": {
+          "pip": "mcp-server-sentry"
+        }
+      }
+    },
+    {
+      "name": "Google Drive",
+      "slug": "gdrive",
+      "creator": "Anthropic",
+      "description": "Google Drive integration for file management and collaboration",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "storage",
+      "tags": ["google-drive", "storage", "files", "collaboration"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+        "env": {
+          "GDRIVE_CREDENTIALS_PATH": "/path/to/.gdrive-server-credentials.json"
+        },
+        "install": {
+          "npm": "@modelcontextprotocol/server-gdrive"
+        }
+      }
+    },
+    {
+      "name": "AWS Knowledge Base",
+      "slug": "aws-kb-retrieval",
+      "creator": "Anthropic",
+      "description": "AWS Knowledge Base retrieval for intelligent document search and Q&A",
+      "version": "1.0.0",
+      "repository": "https://github.com/modelcontextprotocol/servers",
+      "category": "ai",
+      "tags": ["aws", "knowledge-base", "retrieval", "search"],
+      "configuration": {
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-aws-kb-retrieval"],
+        "env": {
+          "AWS_ACCESS_KEY_ID": "YOUR_ACCESS_KEY_HERE",
+          "AWS_SECRET_ACCESS_KEY": "YOUR_SECRET_ACCESS_KEY_HERE",
+          "AWS_REGION": "YOUR_AWS_REGION_HERE"
+        },
+        "install": {
+          "npm": "@modelcontextprotocol/server-aws-kb-retrieval"
+        }
+      }
+    }
+  ]
+}
