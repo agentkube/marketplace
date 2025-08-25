@@ -259,6 +259,22 @@
           "MCP_LANG": "en"
         }
       }
+    },
+    {
+      "name": "Jenkins",
+      "slug": "jenkins",
+      "creator": "jenkins",
+      "description": "Jenkins is a building, testing, and deploying software projects and automating CI/CD pipelines. Jenkins is an open source continuous integration (CI) server. It manages and controls several stages of the software delivery process.",
+      "version": "1.0.0",
+      "repository": "https://github.com/hekmon8/Jenkins-server-mcp",
+      "category": "development",
+      "tags": ["jenkins", "ci", "cd", "automation", "build", "test", "deploy"],
+      "configuration": {
+        "url": "https://jenkins-host/mcp-server/mcp",
+        "headers": {
+          "Authorization": "Basic <user:token base64>"
+        }
+      }
     }
   ]
 }
