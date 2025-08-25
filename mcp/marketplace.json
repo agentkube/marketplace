@@ -233,8 +233,7 @@
       "category": "knowledge",
       "tags": ["wiki", "knowledge-management", "documentation", "deepwiki"],
       "configuration": {
-        "command": "npx",
-        "args": ["-y", "mcp-remote", "https://mcp.deepwiki.com/sse"]
+        "url": "https://mcp.deepwiki.com/sse"
       }
     }
   ]
